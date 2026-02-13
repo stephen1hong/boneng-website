@@ -52,8 +52,8 @@
 <!-- Navigation -->
 <nav class="navbar" id="navbar">
     <div class="container nav-container">
-        <a href="#" class="logo">
-            <img src="Boneng_Logo.png" alt="Boneng Tech" class="logo-img">
+        <a href="#" class="logo" onclick="document.getElementById('logoModal').classList.add('active');return false;">
+            <img src="Boneng_Logo.png" alt="Boneng Tech" class="logo-img" draggable="false">
             <span class="logo-text">Boneng<span class="logo-accent">Tech</span></span>
         </a>
         <ul class="nav-links">
@@ -78,9 +78,6 @@
         <div class="glow glow-3"></div>
     </div>
     <div class="container hero-content">
-        <div class="hero-logo">
-            <img src="Boneng_Logo.png" alt="AI Agents for Healthcare Intelligence">
-        </div>
         <div class="hero-badge">
             <span class="badge-dot"></span>
             AI-Powered Healthcare Solutions
@@ -336,10 +333,10 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">
+                <a href="#" class="logo" onclick="document.getElementById('logoModal').classList.add('active');return false;">
                     <img src="Boneng_Logo.png" alt="Boneng Tech" class="logo-img logo-img-sm">
                 </a>
-                <p>AI agents transforming healthcare, one workflow at a time.</p>
+                <p>AI transforming and optimizing healthcare ecosystems.</p>
             </div>
             <div class="footer-links">
                 <a href="#services">Services</a>
@@ -353,6 +350,14 @@
         </div>
     </div>
 </footer>
+
+<!-- Logo Lightbox Modal -->
+<div class="logo-modal" id="logoModal" onclick="this.classList.remove('active')">
+    <div class="logo-modal-content" onclick="event.stopPropagation()">
+        <button class="logo-modal-close" onclick="document.getElementById('logoModal').classList.remove('active')">&times;</button>
+        <img src="Boneng_Logo.png" alt="Boneng Tech">
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
